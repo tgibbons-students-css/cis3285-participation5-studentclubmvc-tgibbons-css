@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Unit5_student_club_MVC.Models
 {
-    public class StudentModel
+    public class StudentModel : IStudentInterface
     {
         int id;
         string name;
