@@ -64,7 +64,12 @@ namespace Unit5_student_club_MVC.Models
             // search the list for the student that matches the student ID
             // DEBT --- Handle case when student id not found and index is -1
             int index = myStudents.FindIndex(student => (student.Id == studentId));
-            myStudents[index] = updatedStudent;
+            if (index>=0)
+            {
+                // student found, update them
+                myStudents[index] = updatedStudent;
+            } 
+            
         }
     }
 }
