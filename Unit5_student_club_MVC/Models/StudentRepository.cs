@@ -18,7 +18,6 @@ namespace Unit5_student_club_MVC.Models
                 myStudents.Add(new StudentModel(1002, "Jen", 8));
                 myStudents.Add(new StudentModel(1003, "Sabah", 16));
             }
-
         }
 
         public List<IStudentInterface>  getAllStudent()
@@ -35,16 +34,10 @@ namespace Unit5_student_club_MVC.Models
                 }
             }
             // if you can't find the correct student return the first one
-            return (nullStudent());
+            return (new NullStudent());
 
         }
 
-        private IStudentInterface nullStudent()
-        {
-            // create a null student
-            IStudentInterface nullStudent = new StudentModel(-1,"Null Student",-999);
-            return nullStudent;
-        }
 
         public void AddStudent(IStudentInterface newStudent)
         {
